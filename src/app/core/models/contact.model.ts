@@ -6,4 +6,5 @@ export interface Contact {
     phone: string;
     website: string;
     bio: string;
+    imageUrl: string; 
   }
