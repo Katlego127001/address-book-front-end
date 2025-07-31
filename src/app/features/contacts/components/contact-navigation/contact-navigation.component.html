@@ -1,1 +1,14 @@
-<p>contact-navigation works!</p>
+<div class="navigation-buttons">
+    <button mat-flat-button (click)="onNavigate('first')" [disabled]="currentId === 1">
+      <mat-icon>first_page</mat-icon> First
+    </button>
+    <button mat-flat-button (click)="onNavigate('previous')" [disabled]="currentId === 1">
+      <mat-icon>chevron_left</mat-icon> Previous
+    </button>
+    <button mat-flat-button (click)="onNavigate('next')" [disabled]="currentId === maxId">
+      Next <mat-icon>chevron_right</mat-icon>
+    </button>
+    <button mat-flat-button (click)="onNavigate('last')" [disabled]="currentId === maxId">
+      Last <mat-icon>last_page</mat-icon>
+    </button>
+  </div>

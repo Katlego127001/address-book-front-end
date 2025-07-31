@@ -1,1 +1,14 @@
-<p>contacts works!</p>
+<div class="contacts-container">
+    <h1>Address Book</h1>
+  
+    @if (isLoading) {
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    }
+  
+    <app-contact-card [contact]="currentContact"></app-contact-card>
+    <app-contact-navigation 
+      [currentId]="currentId" 
+      [maxId]="maxId"
+      (navigate)="onNavigate($event)">
+    </app-contact-navigation>
+  </div>
