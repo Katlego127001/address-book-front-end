@@ -1,7 +1,9 @@
 // contact-card.component.scss
 .contact-card {
+    width: 100%;
     max-width: 600px;
-    margin: 2rem auto;
+    margin: 0 auto 2rem; // Changed from 2rem auto
+    box-sizing: border-box; // Ensures padding is included in width
     
     .contact-avatar {
       overflow: hidden;
@@ -24,12 +26,12 @@
     }
   
     mat-card-image {
-      height: 200px; /* Reduced from 300px */
-      width: calc(100% - 32px); /* Account for card padding */
-      margin: 0 auto;
+      height: 200px;
+      width: 100%; // Changed from calc(100% - 32px)
+      margin: 0;
       display: block;
       object-fit: cover;
-      border-radius: 4px;
+      border-radius: 0; // Removed border-radius for full-width image
     }
   
     mat-card-content {
